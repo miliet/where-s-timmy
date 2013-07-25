@@ -4,6 +4,8 @@
 var introductionImageEnglish="res/introduction.png";
 var introductionSoundEnglish="res/introduction.wav";
 
+var shareImageEnglish="res/share.png";
+
 var imgEnglishPage0 = "res/page0.png";
 var imgEnglishPage1 = "res/page1.png";
 var imgEnglishPage2 = "res/page2.png";
@@ -15,7 +17,6 @@ var imgEnglishPage7 = "res/page7.png";
 var imgEnglishPage8 = "res/page8.png";
 var imgEnglishPage9 = "res/page9.png";
 var imgEnglishPage10 = "res/page10.png";
-var imgEnglishPage11 = "res/page11.png";
 
 var soundEnglishPage0= "res/page0.mp3";
 var soundEnglishPage1= "";
@@ -28,12 +29,12 @@ var soundEnglishPage7= "res/page7.wav";
 var soundEnglishPage8= "res/page8.wav";
 var soundEnglishPage9= "res/page9.wav";
 var soundEnglishPage10= "res/page10.wav";
-var soundEnglishPage11= "";
 
 //Normal Resources
 /*******************************/
 var splash= "res/splash.png";
 var logo= "res/logo.png";
+var frame= "res/frame.png";
 
 var btnHomeNormal= "res/btnHomeNormal.png";
 var btnHomeSelected= "res/btnHomeSelected.png";
@@ -50,6 +51,13 @@ var btnSoundDisabledSelected= "res/btnSoundDisabledSelected.png";
 var btnSoundReplayNormal= "res/btnSoundReplayNormal.png";
 var btnSoundReplaySelected= "res/btnSoundReplaySelected.png";
 
+var btnFacebookNormal= "res/btnFacebookNormal.png";
+var btnFacebookSelected= "res/btnFacebookSelected.png";
+var btnTwitterNormal= "res/btnTwitterNormal.png";
+var btnTwitterSelected= "res/btnTwitterSelected.png";
+var btnMailNormal= "res/btnMailNormal.png";
+var btnMailSelected= "res/btnMailSelected.png";
+
 var soundBtnStandard= "res/soundBtnStandard.mp3";
 
 var fntArialRoundedMTBold= "res/ArialRoundedMTBold.ttf";
@@ -58,7 +66,7 @@ var fntArialRoundedMTBold= "res/ArialRoundedMTBold.ttf";
 //Global constants
 /*******************************/
 
-var pages=12;
+var pages=11;
 var idEnglish=0;
 var transitionTime=1.0;
 var btnPaddingWidth=10;
@@ -88,7 +96,6 @@ languageEnglish [7]  = "- Hey, Lucy ! – says her mother. Let’s go and look 
 languageEnglish [8]  = "When they arrive at the bedroom Timy is not on the bed \nand the mother looks around the bedroom.";
 languageEnglish [9]  = "- Look! Here is Timy, little hidden or little lost! What do you think, Lucy?";
 languageEnglish [10]  = "- Oh, mummy!, thank you mummy! – I love you Timy – says Lucy.\n – Now, every day, Lucy and Timy take some minutes to tidy up the toys.";
-languageEnglish [11]  = "";
 
 var soundsEnglish = new Array(pages);
 soundsEnglish  [0]  = soundEnglishPage0;
@@ -102,7 +109,6 @@ soundsEnglish [7]  = soundEnglishPage7;
 soundsEnglish [8]  = soundEnglishPage8;
 soundsEnglish [9]  = soundEnglishPage9;
 soundsEnglish [10]  = soundEnglishPage10;
-soundsEnglish [11]  = soundEnglishPage11;
 
 var imgsEnglish = new Array(pages);
 imgsEnglish  [0]  = imgEnglishPage0;
@@ -116,7 +122,6 @@ imgsEnglish  [7]  = imgEnglishPage7;
 imgsEnglish  [8]  = imgEnglishPage8;
 imgsEnglish  [9]  = imgEnglishPage9;
 imgsEnglish  [10]  = imgEnglishPage10;
-imgsEnglish  [11]  = imgEnglishPage11;
 
 var highlightsEnglish=new Array(pages);
 highlightsEnglish [0]  = new Array();
@@ -130,7 +135,6 @@ highlightsEnglish [7]  = new Array();
 highlightsEnglish [8]  = new Array();
 highlightsEnglish [9]  = new Array();
 highlightsEnglish [10]  = new Array();
-highlightsEnglish [11]  = new Array();
 
 
 var coloredWordsEnglish = new Array(pages);
@@ -145,7 +149,6 @@ coloredWordsEnglish [7]  = new Array(2,7,12);
 coloredWordsEnglish [8]  = new Array();
 coloredWordsEnglish [9]  = new Array();
 coloredWordsEnglish [10]  = new Array(6,-1);
-coloredWordsEnglish [11]  = new Array();
 
 /*******************************/
 var languages = new Array(languageEnglish);
@@ -155,3 +158,4 @@ var highlights = new Array(highlightsEnglish);
 var coloredWords= new Array(coloredWordsEnglish);
 var introductionImages=new Array(introductionImageEnglish);
 var introductionSounds=new Array(introductionSoundEnglish);
+var shareImages=new Array(shareImageEnglish);

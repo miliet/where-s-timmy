@@ -3,6 +3,7 @@ var g_ressources = [
     //image
     {src:logo},
     {src:splash},
+    {src:frame},
     {src:introductionImageEnglish},
     {src:imgEnglishPage0},
     {src:imgEnglishPage1},
@@ -15,7 +16,7 @@ var g_ressources = [
     {src:imgEnglishPage8},
     {src:imgEnglishPage9},
     {src:imgEnglishPage10},
-    {src:imgEnglishPage11},
+    {src:shareImageEnglish},
 
     {src:btnHomeNormal},
     {src:btnHomeSelected},
@@ -29,6 +30,13 @@ var g_ressources = [
     {src:btnSoundDisabledSelected},
     {src:btnSoundReplayNormal},
     {src:btnSoundReplaySelected},
+
+    {src:btnFacebookNormal},
+    {src:btnFacebookSelected},
+    {src:btnTwitterNormal},
+    {src:btnTwitterSelected},
+    {src:btnMailNormal},
+    {src:btnMailSelected},
     //plist
 
     //fnt
@@ -52,7 +60,6 @@ var g_ressources = [
     {src:soundEnglishPage7},
     {src:soundEnglishPage8},
     {src:soundEnglishPage9},
-    {src:soundEnglishPage10},
-    {src:soundEnglishPage11}
+    {src:soundEnglishPage10}
 
 ];

@@ -350,7 +350,7 @@ var controllersLayer = cc.Layer.extend({
 
 
         /*Forward*/
-        if (currentPage < pages-1)
+        if (currentPage < pages)
         {
             var menuItemImageForward = cc.MenuItemImage.create(btnForwardNormal,btnForwardSelected,
                 function () {
@@ -358,7 +358,11 @@ var controllersLayer = cc.Layer.extend({
                     this.doSomethingToChangeThePage();
                     currentPage++;
                     var director = cc.Director.getInstance();
-                    director.replaceScene(cc.TransitionFade.create(transitionTime,new bookScene(),cc.c3b(255, 255, 255)));
+                    if(currentPage=pages-1){
+                        director.replaceScene(cc.TransitionProgressOutIn.create(transitionTime/2,new shareScene()));
+                    }else{
+                        director.replaceScene(cc.TransitionFade.create(transitionTime,new bookScene(),cc.c3b(255, 255, 255)));
+                    }
                 },this);
 
             menuItemImageForward.setAnchorPoint(cc.p(1,0.5));
