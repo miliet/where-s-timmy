@@ -47,7 +47,7 @@ var introductionScene = cc.Scene.extend({
         this.addChild(cc.LayerColor.create(cc.c4b(255, 255, 255, 255), size.width,size.height),0);
 
         var introductionL = new introductionLayer();
-        introductionL.init(this);
+        introductionL.init();
         this.addChild(introductionL,1);
 
     }

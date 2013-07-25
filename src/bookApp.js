@@ -358,8 +358,8 @@ var controllersLayer = cc.Layer.extend({
                     this.doSomethingToChangeThePage();
                     currentPage++;
                     var director = cc.Director.getInstance();
-                    if(currentPage=pages-1){
-                        director.replaceScene(cc.TransitionProgressOutIn.create(transitionTime/2,new shareScene()));
+                    if(currentPage==pages-1){
+                        director.replaceScene(cc.TransitionFade.create(transitionTime,new shareScene(),cc.c3b(255, 255, 255)));
                     }else{
                         director.replaceScene(cc.TransitionFade.create(transitionTime,new bookScene(),cc.c3b(255, 255, 255)));
                     }

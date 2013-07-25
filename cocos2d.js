@@ -17,7 +17,7 @@
             'src/splash.js',
             'src/introduction.js',
             'src/bookApp.js', //add your own files in order here
-            'src/share.js'
+            'src/shareR.js'
         ]
     };
 

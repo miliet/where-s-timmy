@@ -26,16 +26,16 @@ var shareLayer = cc.Layer.extend({
 
         var menuItemImageFacebook = cc.MenuItemImage.create(btnFacebookNormal,btnFacebookSelected,
             function () {
-
+               console.log('d');
             },this);
 
         var menuItemImageMail = cc.MenuItemImage.create(btnMailNormal,btnMailSelected,
             function () {
-
+                console.log('a');
             },this);
         var menuItemImageTwitter = cc.MenuItemImage.create(btnTwitterNormal,btnTwitterSelected,
             function () {
-
+                console.log('b');
             },this);
 
 
@@ -46,6 +46,7 @@ var shareLayer = cc.Layer.extend({
         var menuShare = cc.Menu.create(menuItemImageFacebook,menuItemImageMail,menuItemImageTwitter);
         menuShare.setAnchorPoint(cc.p(0.5,1.0));
         menuShare.setPosition(cc.p(size.width / 2, backgroundSprite.getPosition().y-backgroundSprite.getContentSize().height) );
+        menuShare.setHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
         this.addChild(menuShare, 0);
 
 
@@ -58,7 +59,7 @@ var shareLayer = cc.Layer.extend({
             },this);
 
         menuItemImageHome.setAnchorPoint(cc.p(0,0.5));
-        menuItemImageHome.setPosition(cc.p(0+btnPaddingWidth,size.height-(((size.height-backgroundSprite.getContentSize().height)/2)/2)));
+        menuItemImageHome.setPosition(cc.p(0+btnPaddingWidth,size.height-(((size.height-frame.getContentSize().height)/2)/2)));
 
         var menuHome = cc.Menu.create(menuItemImageHome);
         menuHome.setPosition(cc.PointZero());
@@ -68,16 +69,16 @@ var shareLayer = cc.Layer.extend({
     }
 });
 
-var shareScene = cc.Scene.extend({
-    onEnter:function () {
+shareScene = cc.Scene.extend({
+    onEnter: function () {
         this._super();
 
         var size = cc.Director.getInstance().getWinSize();
         this.addChild(cc.LayerColor.create(cc.c4b(255, 255, 255, 255), size.width,size.height),0);
 
         var shareL = new shareLayer();
-        shareL.init(this);
-        this.addChild(shareL,1);
+        shareL.init();
+        this.addChild(shareL, 1);
 
     }
 });
