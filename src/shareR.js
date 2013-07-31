@@ -46,7 +46,6 @@ var shareLayer = cc.Layer.extend({
         var menuShare = cc.Menu.create(menuItemImageFacebook,menuItemImageMail,menuItemImageTwitter);
         menuShare.setAnchorPoint(cc.p(0.5,1.0));
         menuShare.setPosition(cc.p(size.width / 2, backgroundSprite.getPosition().y-backgroundSprite.getContentSize().height) );
-        menuShare.setHorizontalAlignment(cc.TEXT_ALIGNMENT_CENTER);
         this.addChild(menuShare, 0);
 
 
@@ -59,7 +58,7 @@ var shareLayer = cc.Layer.extend({
             },this);
 
         menuItemImageHome.setAnchorPoint(cc.p(0,0.5));
-        menuItemImageHome.setPosition(cc.p(0+btnPaddingWidth,size.height-(((size.height-frame.getContentSize().height)/2)/2)));
+        menuItemImageHome.setPosition(cc.p(0+btnPaddingWidth,size.height-(((size.height-frameSprite.getContentSize().height)/2)/2)));
 
         var menuHome = cc.Menu.create(menuItemImageHome);
         menuHome.setPosition(cc.PointZero());
@@ -71,6 +70,9 @@ var shareLayer = cc.Layer.extend({
 
 shareScene = cc.Scene.extend({
     onEnter: function () {
+        cc.AudioEngine.getInstance().setEffectsVolume(1.0);
+        cc.AudioEngine.getInstance().setMusicVolume(1.0);
+
         this._super();
 
         var size = cc.Director.getInstance().getWinSize();

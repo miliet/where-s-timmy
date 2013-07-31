@@ -49,6 +49,7 @@ var g_ressources = [
 
     //effect
     {src:soundBtnStandard},
+    {src:soundSplash},
     {src:introductionSoundEnglish},
     {src:soundEnglishPage0},
     {src:soundEnglishPage1},

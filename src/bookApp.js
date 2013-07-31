@@ -1,6 +1,3 @@
-cc.AudioEngine.getInstance().setEffectsVolume(1.0);
-cc.AudioEngine.getInstance().setMusicVolume(1.0);
-
 var currentPage = 0;
 var btnWidth=0;
 var imgHeight=0;
@@ -213,7 +210,7 @@ var textLayer = cc.Layer.extend({
         }
     },setLabelColorStandard:function(index) {
         if (coloredWords[this.owner.getCurrentIdLanguage()][currentPage].indexOf(index) > -1) {
-            this.labels[index].setColor(colorWord);
+            this.labels[index].setColor(this.getColorForAWord(index));
         } else {
             this.labels[index].setColor(cc.c3b(0, 0, 0));
         }
@@ -228,6 +225,32 @@ var textLayer = cc.Layer.extend({
                 }
             }
         }
+    },getColorForAWord:function(_index) {
+        var index=0;
+        var i,j;
+        for (i=0;i<pages;i++){
+            if(currentPage==i){
+                var position=coloredWords[this.owner.getCurrentIdLanguage()][currentPage].indexOf(_index)
+                for (j in coloredWords[this.owner.getCurrentIdLanguage()][i]){
+                    if (position==j){
+                        return wordColors[index];
+                    }else{
+                        index++;
+                        if (index>=wordColors.length){
+                            index=0;
+                        }
+                    }
+                }
+            }else{
+                for (j in coloredWords[this.owner.getCurrentIdLanguage()][i]){
+                    index++;
+                    if (index>=wordColors.length){
+                        index=0;
+                    }
+                }
+            }
+        }
+        return cc.c3b(0, 0, 0);
     }
 
 });
@@ -242,6 +265,11 @@ var controllersLayer = cc.Layer.extend({
 
         this.owner=scene;
         this.soundFlag=-1;
+
+        if(soundStatus){
+            cc.AudioEngine.getInstance().setEffectsVolume(1.0);
+            cc.AudioEngine.getInstance().setMusicVolume(1.0);
+        }
 
         var size = cc.Director.getInstance().getWinSize();
 

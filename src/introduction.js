@@ -1,5 +1,3 @@
-cc.AudioEngine.getInstance().setEffectsVolume(1.0);
-cc.AudioEngine.getInstance().setMusicVolume(1.0);
 
 var introductionLayer = cc.Layer.extend({
     init:function () {
@@ -34,13 +32,16 @@ var introductionLayer = cc.Layer.extend({
         if(!cc.AudioEngine.getInstance().isMusicPlaying()){
             this.unscheduleAllCallbacks();
             var director = cc.Director.getInstance();
-            director.replaceScene(cc.TransitionProgressInOut.create(transitionTime/2,new bookScene()));
+            director.replaceScene(cc.TransitionFade.create(transitionTime,new bookScene(),cc.c3b(255, 255, 255)));
         }
     }
 });
 
 var introductionScene = cc.Scene.extend({
     onEnter:function () {
+        cc.AudioEngine.getInstance().setEffectsVolume(1.0);
+        cc.AudioEngine.getInstance().setMusicVolume(1.0);
+
         this._super();
 
         var size = cc.Director.getInstance().getWinSize();
