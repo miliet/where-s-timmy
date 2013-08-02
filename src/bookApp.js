@@ -33,10 +33,12 @@ var textLayer = cc.Layer.extend({
         this.owner=scene;
         this.labels = new Array();
         if(languages[this.owner.getCurrentIdLanguage()][currentPage]!="") this.textPrint(languages[this.owner.getCurrentIdLanguage()][currentPage]);
-        this.owner.controllersL.playSoundLogistic();
 
-
+        this.schedule(this.playWithDelay, transitionTime);
         return true;
+    },playWithDelay:function(dt){
+        this.owner.controllersL.playSoundLogistic();
+        this.unschedule(this.playWithDelay);
     },textPrint:function(text) {
 
         var size = cc.Director.getInstance().getWinSize();
@@ -200,7 +202,7 @@ var textLayer = cc.Layer.extend({
                         cc.CallFunc.create(function(node) {
                             node.setColor(highlightColor);
                         }, this),
-                        cc.DelayTime.create(highlightTime),
+                        cc.DelayTime.create(this.getDelayHighlight(idLanguage,i)),
                         cc.CallFunc.create(function(node) {
                             this.setLabelColorStandard(node.getTag()-1);
                         }, this)
@@ -251,8 +253,22 @@ var textLayer = cc.Layer.extend({
             }
         }
         return cc.c3b(0, 0, 0);
-    }
+    },getDelayHighlight:function(idLanguage,index) {
 
+        var ini= highlights[idLanguage][currentPage][index];
+        var fin=0;
+        for (var i=index+1; i<highlights[idLanguage][currentPage].length;i++){
+            if (highlights[idLanguage][currentPage][i]>0){
+                fin=highlights[idLanguage][currentPage][i];
+                break;
+            }
+        }
+        if (fin==0 || (fin-ini)>1.5 ){
+            return highlightTime;
+        }else{
+            return (fin-ini);
+        }
+    }
 });
 
 var controllersLayer = cc.Layer.extend({

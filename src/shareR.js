@@ -38,6 +38,9 @@ var shareLayer = cc.Layer.extend({
                 console.log('b');
             },this);
 
+        menuItemImageFacebook.setAnchorPoint(cc.p(0.5,1.0));
+        menuItemImageMail.setAnchorPoint(cc.p(0.5,1.0));
+        menuItemImageTwitter.setAnchorPoint(cc.p(0.5,1.0));
 
         var sumHeight=menuItemImageFacebook.getContentSize().height + backgroundSprite.getContentSize().height;
         backgroundSprite.setPosition(cc.p(size.width / 2, (size.height / 2) +sumHeight/2));
@@ -46,6 +49,9 @@ var shareLayer = cc.Layer.extend({
         var menuShare = cc.Menu.create(menuItemImageFacebook,menuItemImageMail,menuItemImageTwitter);
         menuShare.setAnchorPoint(cc.p(0.5,1.0));
         menuShare.setPosition(cc.p(size.width / 2, backgroundSprite.getPosition().y-backgroundSprite.getContentSize().height) );
+        menuShare.alignItemsHorizontally();
+        menuShare.alignItemsHorizontallyWithPadding(btnPaddingWidth);
+
         this.addChild(menuShare, 0);
 
 
