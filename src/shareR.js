@@ -18,24 +18,24 @@ var shareLayer = cc.Layer.extend({
         frameSprite.setPosition(cc.p(size.width / 2, size.height / 2));
         this.addChild(frameSprite, 0);
 
-
         var backgroundSprite=cc.Sprite.create(shareImages[idLanguage]);
         backgroundSprite.setAnchorPoint(cc.p(0.5,1.0));
 
-
-
         var menuItemImageFacebook = cc.MenuItemImage.create(btnFacebookNormal,btnFacebookSelected,
             function () {
-               console.log('d');
+                obj= document.getElementById('facebook');
+                obj.fire('click');
             },this);
 
         var menuItemImageMail = cc.MenuItemImage.create(btnMailNormal,btnMailSelected,
             function () {
-                console.log('a');
+                obj= document.getElementById('mail');
+                obj.fire('click');
             },this);
         var menuItemImageTwitter = cc.MenuItemImage.create(btnTwitterNormal,btnTwitterSelected,
             function () {
-                console.log('b');
+                obj= document.getElementById('twitter');
+                obj.fire('click');
             },this);
 
         menuItemImageFacebook.setAnchorPoint(cc.p(0.5,1.0));
