@@ -2,7 +2,7 @@
 /*******************************/
 
 var introductionImageEnglish="res/introduction.png";
-var introductionSoundEnglish="res/introduction.mp3";
+var introductionSoundEnglish="res/introduction.wav";
 
 var shareImageEnglish="res/share.png";
 
@@ -19,20 +19,20 @@ var imgEnglishPage9 = "res/page9.png";
 var imgEnglishPage10 = "res/page10.png";
 
 var soundEnglishPage0= "";
-var soundEnglishPage1= "res/page0.mp3";
-var soundEnglishPage2= "res/page2.mp3";
-var soundEnglishPage3= "res/page3.mp3";
-var soundEnglishPage4= "res/page4.mp3";
-var soundEnglishPage5= "res/page5.mp3";
-var soundEnglishPage6= "res/page6.mp3";
-var soundEnglishPage7= "res/page7.mp3";
-var soundEnglishPage8= "res/page8.mp3";
-var soundEnglishPage9= "res/page9.mp3";
-var soundEnglishPage10= "res/page10.mp3";
+var soundEnglishPage1= "res/page0.wav";
+var soundEnglishPage2= "res/page2.wav";
+var soundEnglishPage3= "res/page3.wav";
+var soundEnglishPage4= "res/page4.wav";
+var soundEnglishPage5= "res/page5.wav";
+var soundEnglishPage6= "res/page6.wav";
+var soundEnglishPage7= "res/page7.wav";
+var soundEnglishPage8= "res/page8.wav";
+var soundEnglishPage9= "res/page9.wav";
+var soundEnglishPage10= "res/page10.wav";
 
 //Normal Resources
 /*******************************/
-var soundSplash="res/splash.mp3";
+var soundSplash="res/splash.wav";
 var splash= "res/splash.png";
 var logo= "res/logo.png";
 var frame= "res/frame.png";
@@ -59,9 +59,12 @@ var btnTwitterSelected= "res/btnTwitterSelected.png";
 var btnMailNormal= "res/btnMailNormal.png";
 var btnMailSelected= "res/btnMailSelected.png";
 
-var soundBtnStandard= "res/soundBtnStandard.mp3";
+var soundBtnStandard= "res/soundBtnStandard.wav";
 
-var fntArialRoundedMTBold= "res/ArialRoundedMTBold.ttf";
+var ttfArialRoundedMTBold= "res/ArialRoundedMTBold.ttf";
+var svgArialRoundedMTBold= "res/ArialRoundedMTBold.svg";
+var woffArialRoundedMTBold= "res/ArialRoundedMTBold.woff";
+var eotArialRoundedMTBold= "res/ArialRoundedMTBold.eot";
 
 
 //Global constants

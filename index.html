@@ -37,12 +37,8 @@
         <meta name="x5-fullscreen" content="true"/>
 
         <style>
-            @font-face {
-                font-family: 'Arial Rounded MT Bold';
-                src: url('res/ArialRoundedMTBold.ttf');
-            }
+
             body, canvas, div {
-                font-family: 'Arial Rounded MT Bold', Arial;
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
@@ -50,33 +46,15 @@
                 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             }
         </style>
-        <script>
-            function fireEvent(element,event){
-                if (document.createEventObject){
-                    // dispatch for IE
-                    var evt = document.createEventObject();
-                    return element.fireEvent('on'+event,evt)
-                }
-                else{
-                    // dispatch for firefox + others
-                    var evt = document.createEvent("HTMLEvents");
-                    evt.initEvent(event, true, true ); // event type,bubbling,cancelable
-                    return !element.dispatchEvent(evt);
-                }
-            }
-        </script>
     </head>
     <body style="text-align: center;background: #f2f6f8;">
         <div style="display:inline-block;width:auto; margin: 0 auto; background: black; border:5px solid black; border-radius: 10px; box-shadow: 0 5px 50px #333">
             <canvas id="gameCanvas" width="1024" height="768"></canvas>
         </div>
 
-        <a id="#twitter"  style="display:none; visibility: hidden;" href="https://twitter.com/share" class="twitter-share-button" data-text="texto a compartir" data-via="proba" data-lang="es" data-hashtags="proba"></a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-        <a id="#facebook" style="display:none; visibility: hidden;" href="#" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog','width=626,height=436');return false;"></a>
-
-        <a  style="display:none; visibility: hidden;" href="mailto:admin@ayudawordpress.com?subject=Post%20sobre%20mailto&body=Fernando%20me%20ha%20encantado%20tu%20post%sobre%20las%20posibilidades%20de%20mailto%0AMuchas%20Gracias&cc=otro@dominio.com&bcc=otromas@dominio.com"></a>
+        <a id="twitter" style="display:none; visibility: hidden;" href="#" onclick=" window.open('https://twitter.com/share?url='+encodeURIComponent(location.href), 'twitter-share-dialog','width=626,height=456');return false;"></a>
+        <a id="facebook" style="display:none; visibility: hidden;" href="#" onclick=" window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog','width=626,height=436');return false;"></a>
+        <a id="mail" style="display:none; visibility: hidden;" href="mailto:xyz@something.com"></a>
 
         <script src="cocos2d.js"></script>
     </body>

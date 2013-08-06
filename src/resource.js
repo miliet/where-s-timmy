@@ -42,7 +42,10 @@ var g_ressources = [
     //fnt
     {fontName:fntArialRoundedMTBoldStr,
         src:[
-            {src:fntArialRoundedMTBold,type:"truetype"}]},
+            {src:eotArialRoundedMTBold,type:"embedded-opentype"},
+            {src:ttfArialRoundedMTBold,type:"truetype"},
+            {src:woffArialRoundedMTBold,type:"woff"},
+            {src:svgArialRoundedMTBold,type:"svg"}]},
     //tmx
 
     //bgm

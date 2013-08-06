@@ -23,19 +23,16 @@ var shareLayer = cc.Layer.extend({
 
         var menuItemImageFacebook = cc.MenuItemImage.create(btnFacebookNormal,btnFacebookSelected,
             function () {
-                obj= document.getElementById('facebook');
-                obj.fire('click');
+                document.getElementById('facebook').click();
             },this);
 
         var menuItemImageMail = cc.MenuItemImage.create(btnMailNormal,btnMailSelected,
             function () {
-                obj= document.getElementById('mail');
-                obj.fire('click');
+                document.getElementById('mail').click();
             },this);
         var menuItemImageTwitter = cc.MenuItemImage.create(btnTwitterNormal,btnTwitterSelected,
             function () {
-                obj= document.getElementById('twitter');
-                obj.fire('click');
+                document.getElementById('twitter').click();
             },this);
 
         menuItemImageFacebook.setAnchorPoint(cc.p(0.5,1.0));
