@@ -149,15 +149,6 @@ highlightsEnglish [9]  = new Array(0.0,0.280,1.150,1.490,1.678,2.650,2.945,3.765
 //– I love you Timmy – says Lucy.\nNow, every day, Lucy and Timmy take\nsome time to put away the toys.
 highlightsEnglish [10]  = new Array(0.0, 0.2105,0.415,0.955,1.258,0.0,1.920,2.245,3.225,3.692,4.065,4.695,5.230,5.528,6.266,6.426,6.708,7.095,7.345,7.495,8.025,8.181);
 
-languageEnglish [3]  = "Lucy has breakfast with Timmy and\nat night she sleeps with him.";
-languageEnglish [4]  = "Every day, when she comes home from school,\nshe goes to her bedroom to kiss Timmy.";
-languageEnglish [5]  = "– Oh! Oh! Timmy is not here! – cries Lucy.\n– Mummy, Daddy, Timmy is not in the bedroom!\nWhere is he? What has happened to him?";
-languageEnglish [6]  = "Her mother asks Lucy where she left\nTimmy this morning and Lucy, very sad, answers:\n – On my bed!";
-languageEnglish [7]  = "– Hey, Lucy! – says her mother. – Let’s go\nand look for him! But I think you have to be tidier.";
-languageEnglish [8]  = "When they go into the bedroom Timmy is not\non the bed and Lucy’s mother looks around the room.";
-languageEnglish [9]  = "– Look! Here is Timmy, half hidden\nor half lost! What do you think, Lucy?";
-languageEnglish [10]  = "– I love you Timmy – says Lucy.\nNow, every day, Lucy and Timmy take\nsome time to put away the toys.";
-
 var coloredWordsEnglish = new Array(pages);
 coloredWordsEnglish [0]  = new Array();
 coloredWordsEnglish [1]  = new Array();
