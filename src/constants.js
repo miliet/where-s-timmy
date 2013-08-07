@@ -19,7 +19,7 @@ var imgEnglishPage9 = "res/page9.png";
 var imgEnglishPage10 = "res/page10.png";
 
 var soundEnglishPage0= "";
-var soundEnglishPage1= "res/page0.wav";
+var soundEnglishPage1= "res/page1.wav";
 var soundEnglishPage2= "res/page2.wav";
 var soundEnglishPage3= "res/page3.wav";
 var soundEnglishPage4= "res/page4.wav";
