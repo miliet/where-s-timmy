@@ -447,8 +447,10 @@ var controllersLayer = cc.Layer.extend({
     },showMenuSoundReplace:function () {
         this.soundFlag=0;
         if(this.getChildByTag(menuSoundReplayTag).getOpacity()==0.0){
-            this.getChildByTag(menuSoundReplayTag).setTouchEnabled(true);
-            this.getChildByTag(menuSoundReplayTag).runAction(cc.FadeIn.create(btnFadeTime));
+            if(sounds[this.owner.getCurrentIdLanguage()][currentPage]!=""){
+                this.getChildByTag(menuSoundReplayTag).setTouchEnabled(true);
+                this.getChildByTag(menuSoundReplayTag).runAction(cc.FadeIn.create(btnFadeTime));
+            }
         }
     },hideMenuSoundReplace:function () {
         this.soundFlag=1;
